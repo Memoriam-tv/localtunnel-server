@@ -43,7 +43,7 @@ if (argv.help) {
 }
 
 const server = CreateServer({
-    max_tcp_sockets: argv['max-sockets'],
+    max_tcp_sockets: process.env.MAX_SOCKETS || argv['max-sockets'],
     secure: argv.secure,
     domain: process.env.DOMAIN || argv.domain,
     domain: process.env.LANDING || argv.landing,
