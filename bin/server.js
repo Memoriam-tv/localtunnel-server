@@ -1,4 +1,5 @@
-#!/usr/bin/env node -r esm
+#!/usr/bin/env node
+// -r esm
 
 import 'localenv';
 import optimist from 'optimist';
@@ -6,7 +7,7 @@ import optimist from 'optimist';
 import log from 'book';
 import Debug from 'debug';
 
-import CreateServer from '../server';
+import CreateServer from '../server.js';
 
 const debug = Debug('localtunnel');
 
@@ -65,4 +66,3 @@ process.on('unhandledRejection', (reason, promise) => {
 });
 
 // vim: ft=javascript
-
